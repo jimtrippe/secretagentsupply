@@ -1,3 +1,77 @@
 * {
 
 }
+
+html {
+  font-size: 18px;
+  background-color: white;
+  font-family: Helvetica;
+}
+
+body {
+
+}
+
+section {
+  border: 1px solid blue;
+}
+
+.sasi {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  background-image: url("https://jimtrippe.github.io/secretagentsupply/resources/images/moto.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sasi,
+.banner,
+.message {
+  color: white;
+  background-color: black;
+}
+
+.nav {
+  color: white;
+  background-color: red;
+}
+
+.nav a:link    {
+  /* Applies to unvisited links of class nav */
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  }
+.nav a:visited {
+  /* Applies to visited links of class nav */
+  text-decoration: none;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  }
+.nav a:hover   {
+  /* Applies to links under the pointer of class nav */
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  }
+.nav a:active  {
+  /* Applies to activated links of class nav */
+  text-transform: capitalize;
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  }
