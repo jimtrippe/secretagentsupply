@@ -2,14 +2,11 @@
 
 }
 
-html {
+html,
+body {
   font-size: 18px;
   background-color: white;
   font-family: Helvetica;
-}
-
-body {
-
 }
 
 /* Boxes to help with design
@@ -54,12 +51,16 @@ section {
   background-color: firebrick;
 }
 
-.nav ul {
+.nav .container {
   display: flex;
   align-items: center;
   justify-content: space-around;
   list-style: none;
   padding: 0.75em 0;
+}
+
+.nav .menu {
+  display: none;
 }
 
 .message {
@@ -86,7 +87,9 @@ h1 {
   width: 960px;
 }
 
-.item {
+.item1,
+.item2,
+.item3 {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -94,7 +97,9 @@ h1 {
   border: 4px solid black;
 }
 
-.item img {
+.item1 img,
+.item2 img,
+.item3 img {
   margin: 2rem 1rem;
   height: 9rem;
   max-width: 8rem;
@@ -103,7 +108,9 @@ h1 {
   align-items: center;
 }
 
-.item span {
+.item1 span,
+.item2 span,
+.item3 span {
   display: block;
   background-color: black;
   color: white;
@@ -146,4 +153,72 @@ footer {
   display: flex;
   align-items: left;
   padding-top: 2rem;
+}
+
+@media only screen and (max-width: 1024px), (orientation: portrait) {
+    /* Less than 1024 pixel screen */
+  .nav .container {
+  display: none;
+  }
+  .nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.75em 0;
+  }
+  .item1,
+  .item2 {
+    width: 47%;
+  }
+  .item3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+    /* Less than 470 pixel screen */
+  h4 {
+    font-size: 0.77rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+  }
+  h1 {
+    font-size: 1rem;
+    padding-left: 2rem;
+  }
+  .message {
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10rem;
+  }
+  .banner {
+    height: 15rem;
+  }
+  .products {
+    justify-content: center;
+  }
+  .item1 {
+    width: 90%;
+  }
+  .item2,
+  .item3 {
+    display: none;
+  }
+  .locate {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .visit {
+    padding-top: 0.5rem;
+    width: 90%;
+  }
+  .foot {
+    width: 100%;
+  }
+  .foot span {
+    width: 100%;
+    text-align: center;
+  }
 }
